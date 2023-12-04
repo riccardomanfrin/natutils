@@ -4,6 +4,8 @@ defmodule NatUtils.MixProject do
   def project do
     [
       app: :natutils,
+      description: description(),
+      package: package(),
       version: "0.1.0",
       elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
@@ -13,12 +15,22 @@ defmodule NatUtils.MixProject do
     ]
   end
 
+  defp description(), do:
+  "NAT Utilities for (p2p) network management"
+
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
       extra_applications: [:logger]
     ]
   end
+
+  defp package(), do:
+    [
+      name: "natutils",
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/riccardomanfrin/natutils"}
+    ]
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
