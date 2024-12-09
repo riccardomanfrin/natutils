@@ -35,7 +35,7 @@ defmodule NatUtils.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:stun, "~>1.2.8"},
+      {:stun, "~>1.2.15"},
       # Non prod
       {:ex_doc, "~> 0.30", only: :dev, runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false}
